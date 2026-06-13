@@ -166,7 +166,7 @@ Need help? Want to contribute? Have questions about customization?
 | Role | Name |
 |------|------|
 | Creator & Maintainer | **[KyronixStudio](https://github.com/kyronixstudio)** |
-| Contributors | **dray.me**, **6fck** |
+| Contributors | **[dray-me](https://discord.com/users/1105408192537698334)**, **[6fck](https://discord.com/users/1243921122400145423)** |
 
 ---
 
