@@ -27,8 +27,17 @@ This is a **portable background service** that automatically discovers and appli
 - **Created & maintained by**: [KyronixStudio](https://github.com/kyronixstudio)
 - **Dev**: `6fck`
 - **Dev**: `dray.me`
+- **Dev**: `2f9r`
 
 ---
+
+## Repository Versions
+- **GoLang**: [Display-Name-effect-golang](https://github.com/ruruyaa/Display-Name-effect-golang.git)
+- **NodeJs**: [GlowForNodejs](https://github.com/kyronixstudio/GlowForNodejs.git)
+- **TS,JS,PY**: [Display-Name-effect](https://github.com/dray-me/Display-Name-effect.git)
+
+---
+
 
 ## 🚀 Features
 
