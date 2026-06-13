@@ -1,0 +1,26 @@
+{
+  "name": "discord-display-name-styles",
+  "version": "1.0.0",
+  "description": "Discord Display Name Styles System",
+  "main": "index.js",
+  "keywords": [
+    "discord",
+    "bot",
+    "display-name",
+    "customization"
+  ],
+  "author": "KyronixStudio",
+  "contributors": [
+    "dray.me",
+    "6fck"
+  ],
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KyronixStudio/GLOW.git"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "node-fetch": "^2.7.0"
+  }
+}

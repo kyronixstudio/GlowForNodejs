@@ -1,0 +1,38 @@
+# ============================================
+# ✨ GLOW — Display Name Style Configuration
+# ============================================
+# This file defines your Discord bot's display
+# name style (font, effect, and colors).
+#
+# Lines starting with '#' are treated as
+# comments and will be ignored.
+# ============================================
+
+# ---- FONT SELECTION ----
+# Choose a font ID from the list below:
+#   1  = Bangers          7  = Neo-Castel
+#   2  = BioRhyme         8  = Pixelify Sans
+#   3  = Cherry Bomb      9  = Ribes
+#   4  = Chicle          10  = Sinistre
+#   5  = Compagnon       11  = Default (GG Sans)
+#   6  = Museo Moderno   12  = Zilla Slab
+"font_id": 10,
+
+# ---- EFFECT SELECTION ----
+# Choose an effect ID from the list below:
+#   1  = Solid      4  = Toon
+#   2  = Gradient   5  = Pop
+#   3  = Neon       6  = Glow
+"effect_id": 3,
+
+# ---- COLOR SELECTION ----
+# Provide an array of decimal color values.
+#
+#   For SOLID effects:  Use 1 color
+#     Example: [16777215]  (White)
+#              [5865]      (Blue)
+#              [16711935]  (Pink)
+#
+#   For GRADIENT effects: Use exactly 2 colors
+#     Example: [5865, 16777215]  (Blue → White)
+"colors": [16777215]

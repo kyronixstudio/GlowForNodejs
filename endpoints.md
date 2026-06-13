@@ -1,0 +1,103 @@
+# 🔌 Display Name Styles API Endpoints
+
+> GLOW automatically discovers and tests Discord's undocumented API endpoints to apply styles to your bot's profile.
+
+---
+
+## 📖 Overview
+
+The GLOW library utilizes several **undocumented** Discord API endpoints to apply Display Name styles to bot profiles. During startup, GLOW automatically tests these endpoints to find a working payload format.
+
+---
+
+## 🎯 Candidate Endpoints
+
+### 1️⃣ User Profile Endpoint (Global)
+
+| Property | Value |
+|----------|-------|
+| **Method** | `PATCH` |
+| **Route** | `/users/@me` |
+| **Scope** | 🌍 **Global** — Updates the default style across all servers |
+
+### 2️⃣ Guild Member Endpoint (Server-Specific)
+
+| Property | Value |
+|----------|-------|
+| **Method** | `PATCH` |
+| **Route** | `/guilds/{guild_id}/members/@me` |
+| **Scope** | 🏠 **Server-Specific** — Updates style only for the specified guild |
+
+### 3️⃣ Guild Profile Endpoint (Server-Specific)
+
+| Property | Value |
+|----------|-------|
+| **Method** | `PATCH` |
+| **Route** | `/guilds/{guild_id}/profile/@me` |
+| **Scope** | 🏠 **Server-Specific** — Alternate endpoint for server-specific updates |
+
+---
+
+## 📦 Payload Formats
+
+Because the API endpoints change formats frequently, GLOW tests **two distinct JSON payload structures** to see which one the API currently accepts.
+
+### Format A — Nested Structure
+```json
+{
+  "display_name_styles": {
+    "font_id": 10,
+    "effect_id": 3,
+    "colors": [16777215]
+  }
+}
+```
+
+### Format B — Flattened Structure
+```json
+{
+  "display_name_font_id": 10,
+  "display_name_effect_id": 3,
+  "display_name_colors": [16777215]
+}
+```
+
+---
+
+## 🔄 How GLOW Handles Discovery
+
+| Step | Action |
+|------|--------|
+| 1️⃣ | Tests each endpoint with both payload formats |
+| 2️⃣ | Handles rate limiting automatically |
+| 3️⃣ | Verifies the style was actually applied |
+| 4️⃣ | Caches the working configuration for future use |
+
+> ✅ GLOW handles endpoint selection, rate limiting, and verification **automatically** — no manual configuration needed!
+
+---
+
+## 🚀 Forced Re-Discovery
+
+To force GLOW to re-evaluate all endpoints (ignoring cached configs):
+
+```bash
+# Set this environment variable:
+DISCORD_PROFILE_STYLE_FORCE_DISCOVERY=true
+```
+
+---
+
+## 📁 Related Documentation
+
+| File | Description |
+|------|-------------|
+| [🧪 experiments.md](./experiments.md) | Experimental features & API changes |
+| [🔗 compatibility.md](./compatibility.md) | Compatibility matrix testing |
+| [📝 CHANGELOG.md](./CHANGELOG.md) | Version history |
+
+---
+
+<p align="center">
+  <sub>📖 See <a href="./experiments.md">experiments.md</a> for experimental endpoints & changes</sub>
+</p>

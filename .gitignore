@@ -1,0 +1,39 @@
+# ============================================
+# GLOW — Discord Display Name Styles System
+# .gitignore
+# ============================================
+
+# ---- Node.js ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---- Environment Variables ----
+.env
+.env.local
+.env.*.local
+
+# ---- OS Files ----
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ---- IDE / Editor ----
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ---- Logs ----
+logs/
+*.log
+*.jsonl
+
+# ---- Cache ----
+*.cache
