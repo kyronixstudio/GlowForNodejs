@@ -23,7 +23,10 @@ This is a **portable background service** that automatically discovers and appli
 
 > 🛡️ Non-blocking & safe: your bot will never crash if the Discord API rejects the styles.
 
-**Created & maintained by** **[KyronixStudio](https://github.com/kyronixstudio)**
+## Credits & Verification
+- **Created & maintained by**: [KyronixStudio](https://github.com/kyronixstudio)
+- **Dev**: `dray.me`,`6fck`
+
 
 ---
 
