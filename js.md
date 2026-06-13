@@ -1,26 +1,26 @@
-# 📘 JavaScript Implementation Guide
+# JavaScript Implementation Guide
 
 > Automatic display name customization for Discord bots using **Node.js**
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
-- [Requirements](#-requirements)
-- [Installation](#-installation)
-- [Quick Start](#-quick-start)
-- [Configuration Options](#-configuration-options)
-- [Style Configuration](#-style-configuration)
-- [Style Presets](#-style-presets)
-- [Environment Variables](#-environment-variables)
-- [API Reference](#-api-reference)
-- [Logging & Reports](#-logging--reports)
-- [Troubleshooting](#-troubleshooting)
-- [Credits](#-credits)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Quick Start](#quick-start)
+- [Configuration Options](#configuration-options)
+- [Style Configuration](#style-configuration)
+- [Style Presets](#style-presets)
+- [Environment Variables](#environment-variables)
+- [API Reference](#api-reference)
+- [Logging & Reports](#logging--reports)
+- [Troubleshooting](#troubleshooting)
+- [Credits](#credits)
 
 ---
 
-## ✅ Requirements
+## Requirements
 
 | Requirement | Version |
 |-------------|---------|
@@ -30,24 +30,24 @@
 
 ---
 
-## 📦 Installation
+## Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/kyronixstudio/Glow
-cd Glow
+git clone https://github.com/kyronixstudio/GlowForNodejs
+cd GlowForNodejs
 
 # Install dependencies
 npm install
 
 # Configure your bot token
-cp .env.example .env
+echo "DISCORD_TOKEN=your_bot_token_here" > .env
 # Edit .env with your Discord bot token
 ```
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Basic Usage — Discord.js v13+
 
@@ -81,7 +81,7 @@ client.on('ready', async () => {
 
 ---
 
-## ⚙️ Configuration Options
+## Configuration Options
 
 The `ProfileStyleService` accepts the following options:
 
@@ -99,11 +99,11 @@ The `ProfileStyleService` accepts the following options:
 
 ---
 
-## 🎨 Style Configuration
+## Style Configuration
 
 You can configure styles in **3 ways** (priority order):
 
-### 1️⃣ Direct Options (Highest Priority)
+### 1 Direct Options (Highest Priority)
 ```javascript
 await ProfileStyleService.initialize(client, {
   targetStyle: {
@@ -114,7 +114,7 @@ await ProfileStyleService.initialize(client, {
 });
 ```
 
-### 2️⃣ Environment Variables
+### 2 Environment Variables
 ```bash
 # In your .env file
 DISCORD_PROFILE_STYLE_JSON='{"font_id":10,"effect_id":3,"colors":[16777215]}'
@@ -125,7 +125,7 @@ DISCORD_PROFILE_STYLE_EFFECT_ID=3
 DISCORD_PROFILE_STYLE_COLORS=16777215
 ```
 
-### 3️⃣ `style.json` File
+### 3 `style.json` File
 Create a `style.json` in the project root:
 ```json
 {
@@ -135,11 +135,11 @@ Create a `style.json` in the project root:
 }
 ```
 
-> 💡 Comments (lines starting with `#`) are supported in `style.json`
+> Comments (lines starting with `#`) are supported in `style.json`
 
 ---
 
-## 🎭 Style Presets
+## Style Presets
 
 Built-in presets available for quick setup:
 
@@ -171,12 +171,12 @@ await ProfileStyleService.initialize(client, {
 
 ---
 
-## 🌐 Environment Variables
+## Environment Variables
 
 | Variable | Type | Default | Description |
 |----------|------|---------|-------------|
 | `DISCORD_TOKEN` | `string` | — | Your Discord bot token |
-| `DISCORD_PROFILE_STYLE_ENABLED` | `boolean` | `true` | Set to `false` to disable GLOW |
+| `DISCORD_PROFILE_STYLE_ENABLED` | `boolean` | `true` | Set to `false` to disable |
 | `DISCORD_PROFILE_STYLE_PRESET` | `string` | — | Preset key to use |
 | `DISCORD_PROFILE_STYLE_MODE` | `string` | `'rotate'` | `'rotate'`, `'random'`, or `'fixed'` |
 | `DISCORD_PROFILE_STYLE_GUILD_ID` | `string` | — | Apply to specific guild only |
@@ -192,13 +192,13 @@ await ProfileStyleService.initialize(client, {
 
 ---
 
-## 📚 API Reference
+## API Reference
 
-### `ProfileStyleService`
+### ProfileStyleService
 
 The main class for managing Discord Display Name styles.
 
-#### Static Methods
+#### Static Properties & Methods
 
 | Method | Description |
 |--------|-------------|
@@ -232,17 +232,17 @@ Located in `utils/api.js` — handles raw HTTP requests to Discord's API.
 
 ---
 
-## 📝 Logging & Reports
+## Logging & Reports
 
-GLOW automatically generates detailed logs:
+The system automatically generates detailed logs:
 
 ### Log Files
 ```
-📁 logs/display-name-styles/
-├── 📄 YYYY-MM-DD_HH-MM-SS.jsonl     # Raw API request/response traces
-├── 📄 latest-report.md               # Human-readable summary report
-├── 📄 working-config.json            # Cached working configuration
-└── 📄 preset-rotation.json           # Current preset rotation state
+logs/display-name-styles/
+├── YYYY-MM-DD_HH-MM-SS.jsonl     # Raw API request/response traces
+├── latest-report.md               # Human-readable summary report
+├── working-config.json            # Cached working configuration
+└── preset-rotation.json           # Current preset rotation state
 ```
 
 ### JSONL Log Format
@@ -253,17 +253,17 @@ Each line contains a JSON object with:
 
 ---
 
-## 🔧 Troubleshooting
+## Troubleshooting
 
 ### Common Issues
 
 | Issue | Cause | Solution |
 |-------|-------|----------|
-| ❌ **"No working configuration found"** | API endpoint changed | Set `DISCORD_PROFILE_STYLE_FORCE_DISCOVERY=true` |
-| ⏳ **"Rate limited"** | Too many requests | Increase `requestDelayMs` (e.g., `3000`) |
-| ⚠️ **"200 OK but style not applied"** | Silent rejection | Check `.jsonl` logs for verification phase |
-| 🚫 **"401 Unauthorized"** | Invalid bot token | Verify `DISCORD_TOKEN` in `.env` |
-| 🐌 **"Compatibility matrix too slow"** | Rate limit delays | Only run in development, disable in production |
+| "No working configuration found" | API endpoint changed | Set `DISCORD_PROFILE_STYLE_FORCE_DISCOVERY=true` |
+| "Rate limited" | Too many requests | Increase `requestDelayMs` (e.g., `3000`) |
+| "200 OK but style not applied" | Silent rejection | Check `.jsonl` logs for verification phase |
+| "401 Unauthorized" | Invalid bot token | Verify `DISCORD_TOKEN` in `.env` |
+| "Compatibility matrix too slow" | Rate limit delays | Only run in development, disable in production |
 
 ### Debugging
 
@@ -275,33 +275,31 @@ DISCORD_PROFILE_STYLE_FORCE_DISCOVERY=true node index.js
 DISCORD_PROFILE_STYLE_RUN_COMPATIBILITY=true node index.js
 
 # Check latest report
-cat logs/display-name-styles/latest-report.md
+type logs\display-name-styles\latest-report.md
 ```
 
 ---
 
-## 👏 Credits
+## Credits
 
 | Role | Name |
 |------|------|
-| 🏗️ **Main Server** | **KyronixStudio** |
-| 🤝 **Contributors** | **dray.me**, **6fck** |
+| Main Server | **[KyronixStudio](https://github.com/kyronixstudio)** |
+| Contributors | **dray.me**, **6fck** |
 
 ---
 
-## 📖 Related Documentation
+## Related Documentation
 
 | File | Description |
 |------|-------------|
-| [🎨 colors.md](./colors.md) | All supported colors |
-| [🔤 fonts.md](./fonts.md) | All supported fonts |
-| [✨ effects.md](./effects.md) | All visual effects |
-| [🔌 endpoints.md](./endpoints.md) | API endpoints |
-| [🧪 experiments.md](./experiments.md) | Experimental features |
-| [🔗 compatibility.md](./compatibility.md) | Compatibility testing |
+| [colors.md](./colors.md) | All supported colors |
+| [fonts.md](./fonts.md) | All supported fonts |
+| [effects.md](./effects.md) | All visual effects |
+| [endpoints.md](./endpoints.md) | API endpoints |
+| [experiments.md](./experiments.md) | Experimental features |
+| [compatibility.md](./compatibility.md) | Compatibility testing |
 
 ---
 
-<p align="center">
-  <sub>Made with ❤️ by KyronixStudio — GLOW Discord Display Name Styles System</sub>
-</p>
+Made with love by [KyronixStudio](https://github.com/kyronixstudio)

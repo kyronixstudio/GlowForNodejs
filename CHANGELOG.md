@@ -1,4 +1,4 @@
-# 📋 Changelog
+# Changelog
 
 > All notable changes to this project will be documented here.
 >
@@ -7,30 +7,28 @@
 
 ---
 
-## [1.0.0] — 🚀 Initial Release
+## [1.0.0] — Initial Release
 
-### ✅ Added
+### Added
 
 | Item | Description |
 |------|-------------|
-| 🖥️ **Multi-Language Support** | Complete Display Name Styles System implementations in **JavaScript**, **TypeScript**, and **Python** |
-| 🔍 **Auto-Discovery** | Automatic endpoint discovery and cached working configuration testing |
-| 🔄 **Preset Rotation** | 7 built-in presets (`sinistre-neon-white`, `cherry-toon-white`, etc.) |
-| 🏠 **Guild Support** | Guild-scoped profile updating |
-| 📝 **Logging** | JSONL logging + Markdown report generation on each run |
-| 📄 **Project Files** | `.env.example`, `CONTRIBUTING.md`, `LICENSE`, and `CHANGELOG.md` |
+| Multi-Language Support | Complete Display Name Styles System implementations in **JavaScript**, **TypeScript**, and **Python** |
+| Auto-Discovery | Automatic endpoint discovery and cached working configuration testing |
+| Preset Rotation | 7 built-in presets (`sinistre-neon-white`, `cherry-toon-white`, etc.) |
+| Guild Support | Guild-scoped profile updating |
+| Logging | JSONL logging + Markdown report generation on each run |
+| Project Files | `.env.example`, `CONTRIBUTING.md`, `LICENSE`, and `CHANGELOG.md` |
 
-### 🐛 Fixed
+### Fixed
 
 | Issue | Fix |
 |-------|-----|
-| 🐍 **Python Logger Callbacks** | Fixed unawaited logger callbacks in the Python API module — loggers are now properly synchronous |
-| 📘 **TypeScript Compilation** | Resolved type compilation errors regarding static properties |
-| ⚡ **JavaScript Fallback** | Added strict fallback return logic in the JavaScript API fetch loop |
-| 🕐 **Python Deprecations** | Fixed `datetime.utcnow()` deprecation warnings and improved error handling blocks |
+| Python Logger Callbacks | Fixed unawaited logger callbacks in the Python API module — loggers are now properly synchronous |
+| TypeScript Compilation | Resolved type compilation errors regarding static properties |
+| JavaScript Fallback | Added strict fallback return logic in the JavaScript API fetch loop |
+| Python Deprecations | Fixed `datetime.utcnow()` deprecation warnings and improved error handling blocks |
 
 ---
 
-<p align="center">
-  <sub>📋 Full project history available on <a href="https://github.com/kyronixstudio/Glow">GitHub</a></sub>
-</p>
+Full project history available on [KyronixStudio GitHub](https://github.com/kyronixstudio)

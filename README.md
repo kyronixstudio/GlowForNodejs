@@ -1,21 +1,13 @@
-<h1 align="center">✨ GLOW — Discord Display Name Styles System ✨</h1>
-<p align="center">
-  <b>Automatically discover & apply custom fonts, neon effects, and color gradients to your Discord bot's display name!</b>
-</p>
+# Discord Display Name Styles System
 
-<p align="center">
-  <a href="https://discord.gg/UFCdsaMnYm"><img src="https://img.shields.io/badge/Discord-Join%20Server-5865F2?style=flat&logo=discord" alt="Discord"></a>
-  <a href="https://github.com/kyronixstudio/Glow"><img src="https://img.shields.io/badge/GitHub-Repository-181717?style=flat&logo=github" alt="GitHub"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Proprietary-red?style=flat" alt="License"></a>
-</p>
+> Automatically discover & apply custom fonts, neon effects, and color gradients to your Discord bot's display name!
 
 ---
 
 ## 📋 Table of Contents
 
-- [What is GLOW?](#-what-is-glow)
+- [What is this?](#-what-is-this)
 - [🚀 Features](#-features)
-- [📦 Available Implementations](#-available-implementations)
 - [⚙️ Quick Start](#️-quick-start)
 - [📚 Documentation](#-documentation)
 - [⚠️ License & Usage](#️-license--usage)
@@ -24,13 +16,13 @@
 
 ---
 
-## 💡 What is GLOW?
+## 💡 What is this?
 
-**GLOW** is a portable, defensive background service that **automatically discovers and applies** Discord Display Name Styles — including custom fonts, neon effects, and color gradients — to your Discord bot.
+This is a portable, defensive background service that **automatically discovers and applies** Discord Display Name Styles — including custom fonts, neon effects, and color gradients — to your Discord bot.
 
 > 🛡️ It's designed to be **non-blocking** and **safe**: your bot will never crash if the Discord API rejects the styles.
 
-**Created & maintained by** **KyronixStudio**, with contributions from **dray.me** and **6fck**.
+**Created & maintained by** **[KyronixStudio](https://github.com/kyronixstudio)**
 
 ---
 
@@ -47,31 +39,19 @@
 
 ---
 
-## 📦 Available Implementations
-
-Choose the language that best fits your bot:
-
-| Language | Requirements | Setup |
-|----------|-------------|-------|
-| <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black"> **JavaScript** | Node.js 16+, `node-fetch` v2 | [📖 View Docs](./js.md) |
-| <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat&logo=typescript&logoColor=white"> **TypeScript** | Node.js 16+, `node-fetch` v2 | 📖 View Docs (coming soon) |
-| <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"> **Python** | Python 3.8+, `requests` | 📖 View Docs (coming soon) |
-
----
-
 ## ⚙️ Quick Start
 
 ### 1️⃣ Clone & Install
 ```bash
-git clone https://github.com/kyronixstudio/Glow
-cd Glow
+git clone https://github.com/kyronixstudio/GlowForNodejs
+cd GlowForNodejs
 npm install
 ```
 
 ### 2️⃣ Configure Environment
 ```bash
-# Copy the example environment file
-cp .env.example .env
+# Create a .env file with your Discord bot token
+echo "DISCORD_TOKEN=your_bot_token_here" > .env
 
 # Edit .env with your bot token and settings
 ```
@@ -97,15 +77,15 @@ node index.js
 
 | File | Description |
 |------|-------------|
-| [📘 js.md](./js.md) | JavaScript implementation guide |
-| [🎨 colors.md](./colors.md) | All supported colors & how to use them |
-| [🔤 fonts.md](./fonts.md) | All supported fonts & their IDs |
-| [✨ effects.md](./effects.md) | All effects (solid, gradient, neon, etc.) |
-| [🔌 endpoints.md](./endpoints.md) | API endpoints used by GLOW |
-| [🧪 experiments.md](./experiments.md) | Experimental features & notes |
-| [🔗 compatibility.md](./compatibility.md) | Compatibility matrix & testing |
-| [📋 CHANGELOG.md](./CHANGELOG.md) | Version history & changes |
-| [🤝 CONTRIBUTING.md](./CONTRIBUTING.md) | How to contribute |
+| [📘 JavaScript Guide](./js.md) | JavaScript implementation guide |
+| [🎨 Colors](./colors.md) | All supported colors & how to use them |
+| [🔤 Fonts](./fonts.md) | All supported fonts & their IDs |
+| [✨ Effects](./effects.md) | All effects (solid, gradient, neon, etc.) |
+| [🔌 API Endpoints](./endpoints.md) | API endpoints used |
+| [🧪 Experiments](./experiments.md) | Experimental features & notes |
+| [🔗 Compatibility](./compatibility.md) | Compatibility matrix & testing |
+| [📋 Changelog](./CHANGELOG.md) | Version history & changes |
+| [🤝 Contributing](./CONTRIBUTING.md) | How to contribute |
 
 ---
 
@@ -117,7 +97,7 @@ This software is provided under a **Strict Proprietary License**.
 >
 > ✅ **You MAY** use this code for reference or educational purposes.
 >
-> ❓ For help, questions, or to contribute, you **MUST** join our official Discord server.
+> ❓ For help, questions, or to contribute, you **MUST** visit our GitHub organization.
 
 📄 See the [LICENSE](./LICENSE) file for full details.
 
@@ -127,7 +107,7 @@ This software is provided under a **Strict Proprietary License**.
 
 We welcome discussion and contributions!
 
-- 💬 **Join our Discord:** [https://discord.gg/UFCdsaMnYm](https://discord.gg/UFCdsaMnYm)
+- 🏢 **Visit our GitHub:** [https://github.com/kyronixstudio](https://github.com/kyronixstudio)
 - 🐛 **Report bugs** — provide `.jsonl` log files (with tokens redacted)
 - 🔧 **Open Pull Requests** on GitHub
 - 📖 See [CONTRIBUTING.md](./CONTRIBUTING.md) for details
@@ -138,11 +118,11 @@ We welcome discussion and contributions!
 
 | Role | Name |
 |------|------|
-| 🏗️ **Main Server / Architecture** | **KyronixStudio** |
+| 🏗️ **Main Server / Architecture** | **[KyronixStudio](https://github.com/kyronixstudio)** |
 | 🤝 **Contributors** | **dray.me**, **6fck** |
 
 ---
 
 <p align="center">
-  <sub>Made with ❤️ by KyronixStudio — GLOW Discord Display Name Styles System</sub>
+  <sub>Made with ❤️ by <a href="https://github.com/kyronixstudio">KyronixStudio</a></sub>
 </p>
