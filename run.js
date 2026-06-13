@@ -1,7 +1,7 @@
 require('dotenv').config();
 const ProfileStyleService = require('./index.js');
 
-console.log("Starting GLOW Display Name Styles Service...");
+console.log("Starting Discord Display Name Styles Service...");
 
 ProfileStyleService.initialize({})
   .then(report => {
