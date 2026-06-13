@@ -25,8 +25,8 @@ This is a **portable background service** that automatically discovers and appli
 
 ## Credits & Verification
 - **Created & maintained by**: [KyronixStudio](https://github.com/kyronixstudio)
-- **Dev**: `dray.me`,`6fck`
-
+- **Dev**: `6fck`
+- **Dev**: `dray.me`
 
 ---
 
